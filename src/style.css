@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 20px;
+  background: #eef2f5;
+}
+
+.board {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  background: #f0f2f5;
+  width: 280px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.column-title {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.cards-container {
+  flex: 1;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  cursor: grab;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card.dragging {
+  opacity: 0.5;
+  filter: drop-shadow(0 5px 5px rgba(0,0,0,0.2));
+}
+
+.delete-btn {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+  color: #ff6b6b;
+  margin-left: 8px;
+  font-weight: bold;
+}
+
+.card:hover .delete-btn {
+  opacity: 1;
+}
+
+.column-form {
+  padding: 8px;
+  background: #f5f5f5;
+  border-radius: 6px;
+  margin-top: 12px;
+}
+
+.column-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.column-form.hidden {
+  display: none;
+}

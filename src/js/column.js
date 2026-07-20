@@ -3,7 +3,7 @@ import { getState, saveState, renderBoard } from './trello.js';
 export const createColumnForm = (colummId) => {
   const form = document.createElement('div');
   form.className = 'column-form';
-  form.dataset.id = colummId;
+  form.dataset.id = colummId; 
 
   const input = document.createElement('input');
   input.type = 'text';

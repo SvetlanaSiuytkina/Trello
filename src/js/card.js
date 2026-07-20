@@ -1,4 +1,5 @@
 import { getState, saveState, renderBoard } from './trello.js';
+import { setupCardDnD } from './cardNew.js' 
 
 export const createCardElement = (cardData, columnId) => {
   const element = document.createElement('div');
